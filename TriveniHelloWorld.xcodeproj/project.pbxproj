@@ -18,10 +18,10 @@
 		E4274D481C62472900C9CCB3 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = E4274D471C62472900C9CCB3 /* world.png */; };
 		E4274D4A1C62492B00C9CCB3 /* follow.png in Resources */ = {isa = PBXBuildFile; fileRef = E4274D491C62492B00C9CCB3 /* follow.png */; };
 		E4274D4E1C624C0200C9CCB3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4274D4D1C624C0200C9CCB3 /* AVFoundation.framework */; };
-		E4274D501C62578700C9CCB3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E4274D4F1C62578700C9CCB3 /* music.mp3 */; };
 		E4274D5A1C6266E900C9CCB3 /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = E4274D591C6266E900C9CCB3 /* sea.png */; };
 		E4274D5C1C6286B900C9CCB3 /* wave.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4274D5B1C6286B900C9CCB3 /* wave.gif */; };
 		E4274D5E1C6287EB00C9CCB3 /* wave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4274D5D1C6287EB00C9CCB3 /* wave.jpg */; };
+		E47728711C62B97900ABB60D /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E47728701C62B97900ABB60D /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +61,10 @@
 		E4274D471C62472900C9CCB3 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = world.png; path = ../../../Documents/world.png; sourceTree = "<group>"; };
 		E4274D491C62492B00C9CCB3 /* follow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = follow.png; path = ../../../Documents/follow.png; sourceTree = "<group>"; };
 		E4274D4D1C624C0200C9CCB3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		E4274D4F1C62578700C9CCB3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../Downloads/music.mp3; sourceTree = SOURCE_ROOT; };
 		E4274D591C6266E900C9CCB3 /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sea.png; path = ../../../Documents/sea.png; sourceTree = "<group>"; };
 		E4274D5B1C6286B900C9CCB3 /* wave.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = wave.gif; path = ../../../Downloads/wave.gif; sourceTree = "<group>"; };
 		E4274D5D1C6287EB00C9CCB3 /* wave.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wave.jpg; path = ../../../Downloads/wave.jpg; sourceTree = "<group>"; };
+		E47728701C62B97900ABB60D /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +133,10 @@
 		53D67CCA1C60567B0002402F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E47728701C62B97900ABB60D /* music.mp3 */,
 				E4274D5D1C6287EB00C9CCB3 /* wave.jpg */,
 				E4274D5B1C6286B900C9CCB3 /* wave.gif */,
 				E4274D591C6266E900C9CCB3 /* sea.png */,
-				E4274D4F1C62578700C9CCB3 /* music.mp3 */,
 				E4274D491C62492B00C9CCB3 /* follow.png */,
 				E4274D471C62472900C9CCB3 /* world.png */,
 				53D67CCB1C60567B0002402F /* main.m */,
@@ -265,9 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4274D501C62578700C9CCB3 /* music.mp3 in Resources */,
 				53D67CDA1C60567B0002402F /* LaunchScreen.storyboard in Resources */,
 				53D67CD71C60567B0002402F /* Assets.xcassets in Resources */,
+				E47728711C62B97900ABB60D /* music.mp3 in Resources */,
 				E4274D5A1C6266E900C9CCB3 /* sea.png in Resources */,
 				E4274D5E1C6287EB00C9CCB3 /* wave.jpg in Resources */,
 				E4274D481C62472900C9CCB3 /* world.png in Resources */,
