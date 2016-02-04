@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E43E481E1C62C2AB00700B95"
-               BuildableName = "Hello.app"
-               BlueprintName = "Hello"
-               ReferencedContainer = "container:Hello.xcodeproj">
+               BlueprintIdentifier = "E43E48631C62F7DD00700B95"
+               BuildableName = "CountWorld.app"
+               BlueprintName = "CountWorld"
+               ReferencedContainer = "container:CountWorld.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E43E48371C62C2AB00700B95"
-               BuildableName = "HelloTests.xctest"
-               BlueprintName = "HelloTests"
-               ReferencedContainer = "container:Hello.xcodeproj">
+               BlueprintIdentifier = "E43E487C1C62F7DE00700B95"
+               BuildableName = "CountWorldTests.xctest"
+               BlueprintName = "CountWorldTests"
+               ReferencedContainer = "container:CountWorld.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E43E48421C62C2AC00700B95"
-               BuildableName = "HelloUITests.xctest"
-               BlueprintName = "HelloUITests"
-               ReferencedContainer = "container:Hello.xcodeproj">
+               BlueprintIdentifier = "E43E48871C62F7DE00700B95"
+               BuildableName = "CountWorldUITests.xctest"
+               BlueprintName = "CountWorldUITests"
+               ReferencedContainer = "container:CountWorld.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E43E481E1C62C2AB00700B95"
-            BuildableName = "Hello.app"
-            BlueprintName = "Hello"
-            ReferencedContainer = "container:Hello.xcodeproj">
+            BlueprintIdentifier = "E43E48631C62F7DD00700B95"
+            BuildableName = "CountWorld.app"
+            BlueprintName = "CountWorld"
+            ReferencedContainer = "container:CountWorld.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E43E481E1C62C2AB00700B95"
-            BuildableName = "Hello.app"
-            BlueprintName = "Hello"
-            ReferencedContainer = "container:Hello.xcodeproj">
+            BlueprintIdentifier = "E43E48631C62F7DD00700B95"
+            BuildableName = "CountWorld.app"
+            BlueprintName = "CountWorld"
+            ReferencedContainer = "container:CountWorld.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E43E481E1C62C2AB00700B95"
-            BuildableName = "Hello.app"
-            BlueprintName = "Hello"
-            ReferencedContainer = "container:Hello.xcodeproj">
+            BlueprintIdentifier = "E43E48631C62F7DD00700B95"
+            BuildableName = "CountWorld.app"
+            BlueprintName = "CountWorld"
+            ReferencedContainer = "container:CountWorld.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

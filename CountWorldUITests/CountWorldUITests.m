@@ -1,6 +1,6 @@
 //
-//  HelloUITests.m
-//  HelloUITests
+//  CountWorldUITests.m
+//  CountWorldUITests
 //
 //  Created by Triveni Banpela on 2/3/16.
 //  Copyright © 2016 Triveni Banpela. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface HelloUITests : XCTestCase
+@interface CountWorldUITests : XCTestCase
 
 @end
 
-@implementation HelloUITests
+@implementation CountWorldUITests
 
 - (void)setUp {
     [super setUp];
