@@ -14,8 +14,8 @@
 @end
 
  NSInteger result=0;
-int scoreU=0,prevScoreU=0,scoreD=0,prevScoreD=0,scorel=0;prevScorel=0;
-int scoreR=0,prevScoreR=0;
+int scoreU=0,scoreD=0,scorel=0;
+int scoreR=0;
 int sum;
 @implementation ViewController
 
@@ -153,7 +153,7 @@ int sum;
     
     
         [self randomNumber];
-    prevScoreU = scoreU;
+   
     
          [self setScore];
     scoreU = sum;
@@ -272,7 +272,7 @@ int sum;
     
     
     [self randomNumber];
-      prevScoreD = scoreD;
+    
      [self setScore];
     scoreD = sum;
      [self makeSound];
@@ -395,7 +395,7 @@ int sum;
    
     
     [self randomNumber];
-      prevScoreR = scoreR;
+    
      [self setScore];
     scoreR = sum;
      [self makeSound];
@@ -520,7 +520,7 @@ int sum;
    
     
     [self randomNumber];
-      prevScorel = scorel;
+    
     [self setScore];
     scorel = sum;
      [self makeSound];
@@ -661,7 +661,7 @@ int sum;
 
 -(void)chkGameOver{
     
- if(((prevScoreU == scoreU) && (prevScoreD == scoreD) && (prevScorel == scorel) && (prevScoreR == scoreR)) && (scoreU == (scorel && scoreR && scoreD)))
+ if(((sum == scoreU) && (sum == scorel) && (sum==scoreR) && (sum==scoreD)))
  {
            [StatusLabel setEnabled:(true)];
             [StatusLabel setHidden:(false)];
