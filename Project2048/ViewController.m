@@ -661,7 +661,7 @@ int sum;
 
 -(void)chkGameOver{
     
- if((prevScoreU == scoreU) && (prevScoreD == scoreD) && (prevScorel == scorel) && (prevScoreR == scoreR))
+ if(((prevScoreU == scoreU) && (prevScoreD == scoreD) && (prevScorel == scorel) && (prevScoreR == scoreR)) && (scoreU == (scorel && scoreR && scoreD)))
  {
            [StatusLabel setEnabled:(true)];
             [StatusLabel setHidden:(false)];
