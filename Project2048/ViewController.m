@@ -14,8 +14,7 @@
 @end
 
  NSInteger result=0;
-int scoreU=0,scoreD=0,scorel=0;
-int scoreR=0;
+
 int sum;
 @implementation ViewController
 
@@ -156,7 +155,7 @@ int sum;
    
     
          [self setScore];
-    scoreU = sum;
+   
     
     [self makeSound];
     
@@ -274,7 +273,7 @@ int sum;
     [self randomNumber];
     
      [self setScore];
-    scoreD = sum;
+    
      [self makeSound];
     
     
@@ -397,7 +396,7 @@ int sum;
     [self randomNumber];
     
      [self setScore];
-    scoreR = sum;
+    
      [self makeSound];
     
     [self chkGameOver];
@@ -522,7 +521,7 @@ int sum;
     [self randomNumber];
     
     [self setScore];
-    scorel = sum;
+    
      [self makeSound];
     
     
@@ -661,14 +660,65 @@ int sum;
 
 -(void)chkGameOver{
     
- if(((sum == scoreU) && (sum == scorel) && (sum==scoreR) && (sum==scoreD)))
- {
-           [StatusLabel setEnabled:(true)];
-            [StatusLabel setHidden:(false)];
-           [StatusLabel setText:@"GAME OVER !! PRESS START"];
-           [StatusLabel setBackgroundColor: [UIColor redColor]];
 
- }
+    int chkcounter = 0,gamecount = 1;
+     NSInteger j=15;
+     while(j>=0)
+     {
+         if([[[rowlabel objectAtIndex:j] text]isEqual:(@" ")]){
+             chkcounter = 1;
+         }
+         j--;
+     }
+     if(chkcounter == 0)  // means all the labels have values
+     {
+         for(int i=0;i<=15;i++)
+         {
+             if(((i+4)<=15) && ((i+1)<=15))
+             {
+                 if((i!=3) && (i!=7) && (i!=11) && (i!=15))
+                 {
+                     if(([[[rowlabel objectAtIndex:i] text]intValue]==[[[rowlabel objectAtIndex:i+1] text]intValue]) || ([[[rowlabel objectAtIndex:i] text]intValue]==[[[rowlabel objectAtIndex:i+4] text]intValue]))
+                     {
+                         gamecount = 0; //game is not over
+                         
+                     }// i equals to i+1 or i+4
+                 }// 3 or 7 or 11 or 15 check ends
+                 else
+                 {
+                         if(([[[rowlabel objectAtIndex:i] text]intValue]==[[[rowlabel objectAtIndex:i+4] text]intValue]))
+                         {
+                            gamecount = 0;
+                         }
+                     
+                     
+                 }// else ends for 3 or 7 or 11 or 15
+             }// i+4 and i+1 less than equal to 15 check ends
+             else// for the last row
+             {
+                 if((i+1)<=15)
+                 {
+                     if(([[[rowlabel objectAtIndex:i] text]intValue]==[[[rowlabel objectAtIndex:i+1] text]intValue]))
+                     {
+                         gamecount = 0;
+                     }
+                 }
+             } // else last row check ends
+             
+         }// for loop ends
+        
+         if(gamecount == 1) // if none of the adjacent values matched
+         {
+             [StatusLabel setEnabled:(true)];
+             [StatusLabel setHidden:(false)];
+             [StatusLabel setText:@"GAME OVER !! PRESS START"];
+             [StatusLabel setBackgroundColor: [UIColor redColor]];
+         }
+
+     
+     }// chkcounter as zero check
+    
+ 
 }
 
 
