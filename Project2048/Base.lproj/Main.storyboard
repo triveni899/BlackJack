@@ -203,6 +203,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-Qy-Mqq">
+                                <rect key="frame" x="31" y="186" width="247" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.74854525862068966" colorSpace="calibratedRGB"/>
                     </view>
@@ -210,6 +216,7 @@
                         <outlet property="DownButton" destination="rzw-6D-xYo" id="qVY-GG-wiZ"/>
                         <outlet property="LeftButton" destination="5hN-Kr-VJg" id="CWp-xr-36K"/>
                         <outlet property="RightButton" destination="19L-ng-Efh" id="BBf-D2-6RV"/>
+                        <outlet property="StatusLabel" destination="DdT-Qy-Mqq" id="7PC-cd-lfR"/>
                         <outlet property="UpButton" destination="gao-gV-Y7b" id="2XE-Wt-xpu"/>
                         <outlet property="scoreLabel" destination="iiV-0F-z9H" id="zrV-c3-cz2"/>
                         <outletCollection property="rowlabel" destination="cQi-NH-v0b" id="IyQ-it-qT4"/>

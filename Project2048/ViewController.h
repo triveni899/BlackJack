@@ -8,9 +8,15 @@
 
 
 #import <UIKit/UIKit.h>
+#import<AVFoundation/AVFoundation.h>
+
 
 
 @interface ViewController : UIViewController
+{
+    AVAudioPlayer *player;
+}
+
 @property(nonatomic,strong) IBOutletCollection(UILabel) NSArray *rowlabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
@@ -19,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *LeftButton;
 @property (weak, nonatomic) IBOutlet UIButton *RightButton;
 @property (weak, nonatomic) IBOutlet UIButton *StartButton;
+@property (weak, nonatomic) IBOutlet UILabel *StatusLabel;
 
 
 

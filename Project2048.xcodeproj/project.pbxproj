@@ -15,6 +15,8 @@
 		E42AEA3E1C641C9400B5A520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42AEA3C1C641C9400B5A520 /* LaunchScreen.storyboard */; };
 		E42AEA491C641C9400B5A520 /* Project2048Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42AEA481C641C9400B5A520 /* Project2048Tests.m */; };
 		E42AEA541C641C9400B5A520 /* Project2048UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42AEA531C641C9400B5A520 /* Project2048UITests.m */; };
+		E49536301C696EAF0060503C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E495362F1C696EAF0060503C /* AVFoundation.framework */; };
+		E49536321C696F7F0060503C /* tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = E49536311C696F7F0060503C /* tick.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		E42AEA531C641C9400B5A520 /* Project2048UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project2048UITests.m; sourceTree = "<group>"; };
 		E42AEA551C641C9400B5A520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49536271C695F120060503C /* snap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = snap.aif; sourceTree = "<group>"; };
+		E495362F1C696EAF0060503C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E49536311C696F7F0060503C /* tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tick.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49536301C696EAF0060503C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,7 @@
 		E42AEA221C641C9300B5A520 = {
 			isa = PBXGroup;
 			children = (
+				E495362F1C696EAF0060503C /* AVFoundation.framework */,
 				E42AEA2D1C641C9300B5A520 /* Project2048 */,
 				E42AEA471C641C9400B5A520 /* Project2048Tests */,
 				E42AEA521C641C9400B5A520 /* Project2048UITests */,
@@ -102,6 +108,7 @@
 		E42AEA2D1C641C9300B5A520 /* Project2048 */ = {
 			isa = PBXGroup;
 			children = (
+				E49536311C696F7F0060503C /* tick.wav */,
 				E42AEA311C641C9300B5A520 /* AppDelegate.h */,
 				E42AEA321C641C9300B5A520 /* AppDelegate.m */,
 				E42AEA341C641C9300B5A520 /* ViewController.h */,
@@ -246,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42AEA3E1C641C9400B5A520 /* LaunchScreen.storyboard in Resources */,
+				E49536321C696F7F0060503C /* tick.wav in Resources */,
 				E42AEA3B1C641C9400B5A520 /* Assets.xcassets in Resources */,
 				E42AEA391C641C9400B5A520 /* Main.storyboard in Resources */,
 			);

@@ -14,10 +14,14 @@
 @end
 
  NSInteger result=0;
+int scoreU=0,prevScoreU=0,scoreD=0,prevScoreD=0,scorel=0;prevScorel=0;
+int scoreR=0,prevScoreR=0;
+int sum;
 @implementation ViewController
 
 @synthesize rowlabel;
 @synthesize scoreLabel;
+@synthesize StatusLabel;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -149,12 +153,14 @@
     
     
         [self randomNumber];
+    prevScoreU = scoreU;
     
          [self setScore];
+    scoreU = sum;
     
+    [self makeSound];
     
-    
-    
+    [self chkGameOver];
     
     
 }//Upbutton ends
@@ -266,10 +272,13 @@
     
     
     [self randomNumber];
+      prevScoreD = scoreD;
      [self setScore];
+    scoreD = sum;
+     [self makeSound];
     
     
-    
+    [self chkGameOver];
     
     
 } //DownButton ends
@@ -386,9 +395,12 @@
    
     
     [self randomNumber];
+      prevScoreR = scoreR;
      [self setScore];
+    scoreR = sum;
+     [self makeSound];
     
-    
+    [self chkGameOver];
     
 } //RightButton ends
 
@@ -508,11 +520,13 @@
    
     
     [self randomNumber];
-    
+      prevScorel = scorel;
     [self setScore];
+    scorel = sum;
+     [self makeSound];
     
     
-    
+    [self chkGameOver];
     
     
     
@@ -595,18 +609,22 @@
 }
 
 - (void)setScore{
-   int sum = 0,value =0;
+   int sum1=0,value =0;
+    
     for(int i=0; i<=15; i++) {
         
      if(!([[[rowlabel objectAtIndex:i] text]isEqual:(@" ")]))
      {
          value = [[[rowlabel objectAtIndex:i] text]intValue];
-        sum=sum+value;
+        sum1=sum1+value;
     
      }
         
     }
-    [scoreLabel setText:[NSString stringWithFormat:@"%d",sum]];
+    sum = sum1;
+    [scoreLabel setText:[NSString stringWithFormat:@"%d",sum1]];
+   
+
     
 }
 
@@ -614,7 +632,7 @@
 - (IBAction)StartButton:(id)sender {
     
     
-    for(NSInteger i=0; i<rowlabel.count; i++) {
+    for(NSInteger i=0; i<=15; i++) {
         
         [[rowlabel objectAtIndex:i] setText:@" "];
         [[rowlabel objectAtIndex:i] setBackgroundColor: [UIColor lightGrayColor]];
@@ -625,11 +643,33 @@
      [[rowlabel objectAtIndex:0] setText:@"2"];
      [[rowlabel objectAtIndex:12] setText:@"2"];
     [scoreLabel setText:@"0"];
+      [StatusLabel setEnabled:(false)];
+    [StatusLabel setHidden:(true)];
+     [self makeSound];
     
     
 }
 
+-(void)makeSound{
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                         pathForResource:@"tick"
+                                         ofType:@"wav"]];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    // player.numberOfLoops = 1;
+    [player play];
+}
 
+-(void)chkGameOver{
+    
+ if((prevScoreU == scoreU) && (prevScoreD == scoreD) && (prevScorel == scorel) && (prevScoreR == scoreR))
+ {
+           [StatusLabel setEnabled:(true)];
+            [StatusLabel setHidden:(false)];
+           [StatusLabel setText:@"GAME OVER !! PRESS START"];
+           [StatusLabel setBackgroundColor: [UIColor redColor]];
+
+ }
+}
 
 
 @end
