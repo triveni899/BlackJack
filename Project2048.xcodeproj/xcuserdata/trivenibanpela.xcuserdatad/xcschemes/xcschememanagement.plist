@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CountWorld.xcscheme</key>
+		<key>Project2048.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E43E48631C62F7DD00700B95</key>
+		<key>E42AEA2A1C641C9300B5A520</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E43E487C1C62F7DE00700B95</key>
+		<key>E42AEA431C641C9400B5A520</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E43E48871C62F7DE00700B95</key>
+		<key>E42AEA4E1C641C9400B5A520</key>
 		<dict>
 			<key>primary</key>
 			<true/>

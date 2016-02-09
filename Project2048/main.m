@@ -1,8 +1,8 @@
 //
 //  main.m
-//  CountWorld
+//  Project2048
 //
-//  Created by Triveni Banpela on 2/3/16.
+//  Created by Triveni Banpela on 2/4/16.
 //  Copyright © 2016 Triveni Banpela. All rights reserved.
 //
 

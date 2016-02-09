@@ -1,18 +1,18 @@
 //
-//  CountWorldTests.m
-//  CountWorldTests
+//  Project2048Tests.m
+//  Project2048Tests
 //
-//  Created by Triveni Banpela on 2/3/16.
+//  Created by Triveni Banpela on 2/4/16.
 //  Copyright © 2016 Triveni Banpela. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface CountWorldTests : XCTestCase
+@interface Project2048Tests : XCTestCase
 
 @end
 
-@implementation CountWorldTests
+@implementation Project2048Tests
 
 - (void)setUp {
     [super setUp];
