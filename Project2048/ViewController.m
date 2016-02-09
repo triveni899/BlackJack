@@ -137,6 +137,36 @@ int sum;
                         [[rowlabel objectAtIndex:i] setBackgroundColor: [UIColor lightGrayColor]];
                         [self matchColor:value andIndex:i-12];
                         //[[rowlabel objectAtIndex:i-12] setBackgroundColor: [UIColor lightGrayColor]];
+                            match_counter = 1;
+                        }
+                        
+                        else
+                            if((i-8)>=0)
+                        {
+                            if(match_counter == 0)
+                            {
+                            NSInteger value = [[[rowlabel objectAtIndex:i] text]intValue];
+                            [[rowlabel objectAtIndex:i-8] setText:[NSString stringWithFormat:@"%d",value]];
+                            [[rowlabel objectAtIndex:i] setText:@" "];
+                            [[rowlabel objectAtIndex:i] setBackgroundColor: [UIColor lightGrayColor]];
+                            [self matchColor:value andIndex:i-8];
+                            //[[rowlabel objectAtIndex:i-12] setBackgroundColor: [UIColor lightGrayColor]];
+                            match_counter = 1;
+                            }
+                            
+                        }
+                        else if((i-4)>=0)
+                        {
+                            if(match_counter == 0)
+                            {
+                                NSInteger value = [[[rowlabel objectAtIndex:i] text]intValue];
+                                [[rowlabel objectAtIndex:i-4] setText:[NSString stringWithFormat:@"%d",value]];
+                                [[rowlabel objectAtIndex:i] setText:@" "];
+                                [[rowlabel objectAtIndex:i] setBackgroundColor: [UIColor lightGrayColor]];
+                                [self matchColor:value andIndex:i-4];
+                                //[[rowlabel objectAtIndex:i-12] setBackgroundColor: [UIColor lightGrayColor]];
+                                match_counter = 1;
+                            }
                         }
                         
                     }//chk for (i-12) >0 ends
