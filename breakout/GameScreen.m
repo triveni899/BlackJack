@@ -65,7 +65,7 @@
 	dy = 10;
     score = 50;
     ScoreVal.text = [NSString stringWithFormat:@"%d", score];
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"img1.jpg"]];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wall3.jpg"]];
     //[self playMusic];
     
 }
@@ -160,7 +160,7 @@
            CGPoint q = {100,200};
            [brickImage setCenter:q];
            [self addSubview:brickImage]; */
-         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"go.jpg"]];
+         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"over.jpg"]];
             [timer invalidate];
            
           
