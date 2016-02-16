@@ -13,6 +13,9 @@
 @synthesize timer;
 @synthesize brick;
 @synthesize brick_array;
+@synthesize ScoreVal;
+@synthesize gameOver;
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -28,35 +31,57 @@
     int index = 0;
     
    
-    for(int i=0;i<5;i++)
+    for(int i=0;i<10;i++)
     {
         for(int j=0; j<5;j++)
         {
             brick = [[UIView alloc] initWithFrame:CGRectMake(x, y,60,15)];
             [self.brick_array addObject:brick];
             [self addSubview:brick_array[index]];
-            [brick_array[index] setBackgroundColor:[[UIColor alloc] initWithRed:arc4random()%256/256.0 green:arc4random()%256/256.0 blue:arc4random()%256/256.0 alpha:1.0]];
+           // [brick_array[index] setBackgroundColor:[[UIColor alloc] initWithRed:arc4random()%256/256.0 green:arc4random()%256/256.0 blue:arc4random()%256/256.0 alpha:1.0]];
+            [brick_array[index] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"brick.png"]] ];
             x=x+60;
             index++;
         }
         x=20;y=y+20;
+        
     }
         
 	paddle = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 60, 10)];
 	[self addSubview:paddle];
-	[paddle setBackgroundColor:[UIColor blackColor]];
+	[paddle setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"paddle.png"]]];
     CGPoint p = {50,500};
     [paddle setCenter:p];
     
+    
 	
-	ball = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 10, 10)];
+	ball = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 15, 15)];
 	[self addSubview:ball];
-	[ball setBackgroundColor:[UIColor redColor]];
+	[ball setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green.png"]]];
     CGPoint q = {50,490};
     [ball setCenter:q];
 	
 	dx = 10;
 	dy = 10;
+    score = 50;
+    ScoreVal.text = [NSString stringWithFormat:@"%d", score];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"img1.jpg"]];
+    //[self playMusic];
+    
+}
+
+
+- (void)playMusic {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"wallAndPaddle" ofType:@"wav"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: filePath];
+    
+    musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    //musicPlayer.numberOfLoops = -1; //infinite replays
+    
+    
+    
+    [musicPlayer prepareToPlay];
+    [musicPlayer play];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -125,11 +150,33 @@
            p.y += 2*dy;
            [ball setCenter:p];
            tempbrick.hidden = YES;
+           [self playMusic];
        }
    }
-    
+    if(ball.center.y > paddle.center.y)
+       {
+         
+       /* UIImageView *brickImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gameover.jpg"]];
+           CGPoint q = {100,200};
+           [brickImage setCenter:q];
+           [self addSubview:brickImage]; */
+         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"go.jpg"]];
+            [timer invalidate];
+           
+          
+       }
     
 
 }
+/*
+
+-(void)exitgame{
+    
+    for(UIView* view in self.subviews)
+    {
+        [view removeFromSuperview];
+    }
+    
+} */
 
 @end
