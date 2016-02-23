@@ -1,17 +1,19 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5DD499141388EB6C3582624CE1E02482ABB149F7+++6AE58DF",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5DD499141388EB6C3582624CE1E02482ABB149F7+++7F7405D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "5DD499141388EB6C3582624CE1E02482ABB149F7+++4BC6F8B" : 0,
     "5DD499141388EB6C3582624CE1E02482ABB149F7+++6AE58DF" : 0,
+    "5DD499141388EB6C3582624CE1E02482ABB149F7+++7F7405D" : 0,
+    "5DD499141388EB6C3582624CE1E02482ABB149F7+++4BC6F8B" : 0,
     "5DD499141388EB6C3582624CE1E02482ABB149F7+++59DE793" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C5254978-661D-43C8-9C98-6169F5945993",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5DD499141388EB6C3582624CE1E02482ABB149F7+++4BC6F8B" : "",
     "5DD499141388EB6C3582624CE1E02482ABB149F7+++6AE58DF" : "p04-banpela-kristiansen\/",
+    "5DD499141388EB6C3582624CE1E02482ABB149F7+++7F7405D" : "repos\/",
+    "5DD499141388EB6C3582624CE1E02482ABB149F7+++4BC6F8B" : "",
     "5DD499141388EB6C3582624CE1E02482ABB149F7+++59DE793" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Asteroids",
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/teamgustri\/p04-banpela-kristiansen.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DD499141388EB6C3582624CE1E02482ABB149F7+++6AE58DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/teamgustri\/p04-banpela-kristiansen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DD499141388EB6C3582624CE1E02482ABB149F7+++7F7405D"
     }
   ]
 }

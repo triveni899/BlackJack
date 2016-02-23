@@ -245,7 +245,6 @@ int _lives;
                 asteroid.hidden = YES;
                 score++;
                 self.myLabel.text = [NSString stringWithFormat:@"Score: %d", score];
-<<<<<<< HEAD
                 NSError *error;
                 NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"asteroid" withExtension:@"wav"];
               
@@ -256,20 +255,12 @@ int _lives;
                 [player play];
                 
             
-=======
-
-                
->>>>>>> c400df1bc6831222a5344fe748d03d14ee8802a8
                 NSLog(@"you just destroyed an asteroid");
                 continue;
             }
         }
         if ([_ship intersectsNode:asteroid]) {
-<<<<<<< HEAD
             if(fabs((_ship.position.y) - (asteroid.position.y)) > asteroid.frame.size.height/4 + _ship.frame.size.height/4)
-=======
-            if(abs((_ship.position.y) - (asteroid.position.y)) > asteroid.frame.size.height/4 + _ship.frame.size.height/4)
->>>>>>> c400df1bc6831222a5344fe748d03d14ee8802a8
             {
                 continue;
             }

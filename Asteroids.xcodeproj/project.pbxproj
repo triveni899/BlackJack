@@ -24,8 +24,6 @@
 		E427D8931C7BAE5E009E7275 /* laser_red.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8921C7BAE5E009E7275 /* laser_red.png */; };
 		E427D8A11C7BBB5B009E7275 /* skyl.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8A01C7BBB5B009E7275 /* skyl.png */; };
 		E427D8A31C7BBBEE009E7275 /* laser_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8A21C7BBBEE009E7275 /* laser_blue.png */; };
-		E427D8A81C7BF6E0009E7275 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E427D8A61C7BF6E0009E7275 /* Accelerate.framework */; };
-		E427D8A91C7BF6E0009E7275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */; };
 		E427D8AB1C7BFA40009E7275 /* loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AA1C7BFA40009E7275 /* loop.wav */; };
 		E427D8AE1C7BFB00009E7275 /* asteroid.wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AC1C7BFB00009E7275 /* asteroid.wav */; };
 		E427D8AF1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */; };
@@ -76,8 +74,6 @@
 		E427D8A01C7BBB5B009E7275 /* skyl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyl.png; sourceTree = "<group>"; };
 		E427D8A21C7BBBEE009E7275 /* laser_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser_blue.png; sourceTree = "<group>"; };
 		E427D8A51C7BF57D009E7275 /* music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.caf; sourceTree = "<group>"; };
-		E427D8A61C7BF6E0009E7275 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E427D8AA1C7BFA40009E7275 /* loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loop.wav; sourceTree = "<group>"; };
 		E427D8AC1C7BFB00009E7275 /* asteroid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = asteroid.wav; sourceTree = "<group>"; };
 		E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rhythmic_loop01(90BPM).wav"; sourceTree = "<group>"; };
@@ -88,8 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E427D8A81C7BF6E0009E7275 /* Accelerate.framework in Frameworks */,
-				E427D8A91C7BF6E0009E7275 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +127,6 @@
 		E427D84F1C7B76F9009E7275 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				DA8379F41C7BE004003E9AEA /* rocket.png */,
 				E427D8531C7B76F9009E7275 /* AppDelegate.h */,
 				E427D8541C7B76F9009E7275 /* AppDelegate.m */,
 				E427D8561C7B76F9009E7275 /* GameScene.h */,
@@ -158,8 +151,6 @@
 				E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */,
 				E427D8AA1C7BFA40009E7275 /* loop.wav */,
 				E427D8A51C7BF57D009E7275 /* music.caf */,
-				E427D8A61C7BF6E0009E7275 /* Accelerate.framework */,
-				E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */,
 				E427D8511C7B76F9009E7275 /* main.m */,
 			);
 			name = "Supporting Files";
