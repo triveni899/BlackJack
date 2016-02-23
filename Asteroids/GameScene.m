@@ -40,9 +40,10 @@ int _lives;
          */
         
         
-        _ship = [SKSpriteNode spriteNodeWithImageNamed:@"rocket3.png"];
+        _ship = [SKSpriteNode spriteNodeWithImageNamed:@"rocket.png"];
         _ship.position = CGPointMake(self.frame.size.width*0.1,CGRectGetMidY(self.frame));
-        
+        [_ship setXScale:0.5];
+        [_ship setYScale:0.5];
         
         _ship.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_ship.frame.size];
         _ship.physicsBody.dynamic = YES;
@@ -187,7 +188,7 @@ int _lives;
         _nextAsteroidSpawn = randSecs + curTime;
         
         float randY = [self randomValueBetween:0.0 andValue:self.frame.size.height];
-        float randDuration = [self randomValueBetween:2.0 andValue:10.0];
+        float randDuration = [self randomValueBetween:5.0 andValue:10.0];
         
         SKSpriteNode *asteroid = [_asteroids objectAtIndex:_nextAsteroid];
         _nextAsteroid = (_nextAsteroid+1) % _asteroids.count;
@@ -227,7 +228,7 @@ int _lives;
             }
         }
         if ([_ship intersectsNode:asteroid]) {
-            if(abs((_ship.position.y) - (asteroid.position.y)) > asteroid.frame.size.height/2 + _ship.frame.size.height/2)
+            if(abs((_ship.position.y) - (asteroid.position.y)) > asteroid.frame.size.height/4 + _ship.frame.size.height/4)
             {
                 continue;
             }
@@ -239,7 +240,7 @@ int _lives;
             SKAction *blinkForTime = [SKAction repeatAction:blink count:4];
             [_ship runAction:blinkForTime];
             _lives--;
-            NSLog(@"your ship has been hit! %d:%d", (int)_ship.position.y, (int)asteroid.position.y);
+            NSLog(@"your ship has been hit! %d:%d|%d", (int)_ship.position.y, (int)asteroid.position.y, (int)self.frame.size.height);
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA8379F51C7BE004003E9AEA /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8379F41C7BE004003E9AEA /* rocket.png */; };
 		E427D8521C7B76F9009E7275 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8511C7B76F9009E7275 /* main.m */; };
 		E427D8551C7B76F9009E7275 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8541C7B76F9009E7275 /* AppDelegate.m */; };
 		E427D8581C7B76F9009E7275 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8571C7B76F9009E7275 /* GameScene.m */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA8379F41C7BE004003E9AEA /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		E427D84D1C7B76F9009E7275 /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E427D8511C7B76F9009E7275 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E427D8531C7B76F9009E7275 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		E427D84F1C7B76F9009E7275 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				DA8379F41C7BE004003E9AEA /* rocket.png */,
 				E427D8531C7B76F9009E7275 /* AppDelegate.h */,
 				E427D8541C7B76F9009E7275 /* AppDelegate.m */,
 				E427D8561C7B76F9009E7275 /* GameScene.h */,
@@ -271,6 +274,7 @@
 			files = (
 				E427D88D1C7B8DD7009E7275 /* rocket2.png in Resources */,
 				E427D8A31C7BBBEE009E7275 /* laser_blue.png in Resources */,
+				DA8379F51C7BE004003E9AEA /* rocket.png in Resources */,
 				E427D8931C7BAE5E009E7275 /* laser_red.png in Resources */,
 				E427D8A11C7BBB5B009E7275 /* skyl.png in Resources */,
 				E427D85A1C7B76F9009E7275 /* GameScene.sks in Resources */,
