@@ -21,6 +21,7 @@ int _lives;
     CMMotionManager *_motionManager;
     NSMutableArray *_asteroids;
     int _nextAsteroid;
+    int score;
     double _nextAsteroidSpawn;
     NSMutableArray *_shipLasers;
     int _nextShipLaser;
@@ -39,6 +40,19 @@ int _lives;
          [self addChild:bgImage];
          */
         
+        self.myLabel = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
+        self.myLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+        self.myLabel.fontSize = 20;
+        self.myLabel.position = CGPointMake(CGRectGetMidX(self.frame), 45);
+        
+        [self addChild:self.myLabel];
+        
+        self.myLives = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
+        self.myLives.text = [NSString stringWithFormat:@"Lives: %d", _lives];
+        self.myLives.fontSize = 20;
+        self.myLives.position = CGPointMake(CGRectGetMidX(self.frame), 20);
+        
+        [self addChild:self.myLives];
         
         _ship = [SKSpriteNode spriteNodeWithImageNamed:@"rocket.png"];
         _ship.position = CGPointMake(self.frame.size.width*0.1,CGRectGetMidY(self.frame));
@@ -82,6 +96,11 @@ int _lives;
 -(void)startTheGame
 {
     _nextAsteroidSpawn = 0;
+    score = 0;
+    self.myLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+    
+    _lives = 5;
+    self.myLives.text = [NSString stringWithFormat:@"Lives: %d", _lives];
     
     for (SKSpriteNode *asteroid in _asteroids) {
         asteroid.hidden = YES;
@@ -145,7 +164,7 @@ int _lives;
     }
     
     //2
-    shipLaser.position = CGPointMake(_ship.position.x+shipLaser.size.width/2,_ship.position.y+0);
+    shipLaser.position = CGPointMake(_ship.position.x+shipLaser.size.width,_ship.position.y+5);
     shipLaser.hidden = NO;
     [shipLaser removeAllActions];
     
@@ -222,6 +241,9 @@ int _lives;
             if ([shipLaser intersectsNode:asteroid]) {
                 shipLaser.hidden = YES;
                 asteroid.hidden = YES;
+                score++;
+                self.myLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+
                 
                 NSLog(@"you just destroyed an asteroid");
                 continue;
@@ -240,6 +262,12 @@ int _lives;
             SKAction *blinkForTime = [SKAction repeatAction:blink count:4];
             [_ship runAction:blinkForTime];
             _lives--;
+            self.myLives.text = [NSString stringWithFormat:@"Lives: %d", _lives];
+
+            if(_lives < 1){
+                [self startTheGame];
+            }
+            
             NSLog(@"your ship has been hit! %d:%d|%d", (int)_ship.position.y, (int)asteroid.position.y, (int)self.frame.size.height);
         }
     }
