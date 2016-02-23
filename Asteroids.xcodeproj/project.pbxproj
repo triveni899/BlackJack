@@ -133,6 +133,7 @@
 		E427D84F1C7B76F9009E7275 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				DA8379F41C7BE004003E9AEA /* rocket.png */,
 				E427D8531C7B76F9009E7275 /* AppDelegate.h */,
 				E427D8541C7B76F9009E7275 /* AppDelegate.m */,
 				E427D8561C7B76F9009E7275 /* GameScene.h */,
