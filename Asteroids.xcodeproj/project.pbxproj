@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA8379F51C7BE004003E9AEA /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8379F41C7BE004003E9AEA /* rocket.png */; };
 		E427D8521C7B76F9009E7275 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8511C7B76F9009E7275 /* main.m */; };
 		E427D8551C7B76F9009E7275 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8541C7B76F9009E7275 /* AppDelegate.m */; };
 		E427D8581C7B76F9009E7275 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E427D8571C7B76F9009E7275 /* GameScene.m */; };
@@ -23,6 +24,11 @@
 		E427D8931C7BAE5E009E7275 /* laser_red.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8921C7BAE5E009E7275 /* laser_red.png */; };
 		E427D8A11C7BBB5B009E7275 /* skyl.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8A01C7BBB5B009E7275 /* skyl.png */; };
 		E427D8A31C7BBBEE009E7275 /* laser_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E427D8A21C7BBBEE009E7275 /* laser_blue.png */; };
+		E427D8A81C7BF6E0009E7275 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E427D8A61C7BF6E0009E7275 /* Accelerate.framework */; };
+		E427D8A91C7BF6E0009E7275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */; };
+		E427D8AB1C7BFA40009E7275 /* loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AA1C7BFA40009E7275 /* loop.wav */; };
+		E427D8AE1C7BFB00009E7275 /* asteroid.wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AC1C7BFB00009E7275 /* asteroid.wav */; };
+		E427D8AF1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav in Resources */ = {isa = PBXBuildFile; fileRef = E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA8379F41C7BE004003E9AEA /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		E427D84D1C7B76F9009E7275 /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E427D8511C7B76F9009E7275 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E427D8531C7B76F9009E7275 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +75,12 @@
 		E427D8921C7BAE5E009E7275 /* laser_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser_red.png; sourceTree = "<group>"; };
 		E427D8A01C7BBB5B009E7275 /* skyl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyl.png; sourceTree = "<group>"; };
 		E427D8A21C7BBBEE009E7275 /* laser_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser_blue.png; sourceTree = "<group>"; };
+		E427D8A51C7BF57D009E7275 /* music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.caf; sourceTree = "<group>"; };
+		E427D8A61C7BF6E0009E7275 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E427D8AA1C7BFA40009E7275 /* loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loop.wav; sourceTree = "<group>"; };
+		E427D8AC1C7BFB00009E7275 /* asteroid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = asteroid.wav; sourceTree = "<group>"; };
+		E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rhythmic_loop01(90BPM).wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E427D8A81C7BF6E0009E7275 /* Accelerate.framework in Frameworks */,
+				E427D8A91C7BF6E0009E7275 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,15 +138,10 @@
 				E427D8561C7B76F9009E7275 /* GameScene.h */,
 				E427D8571C7B76F9009E7275 /* GameScene.m */,
 				E427D8591C7B76F9009E7275 /* GameScene.sks */,
-				E427D88E1C7B8E60009E7275 /* rocket3.png */,
-				E427D8A01C7BBB5B009E7275 /* skyl.png */,
-				E427D8A21C7BBBEE009E7275 /* laser_blue.png */,
-				E427D8901C7B90F2009E7275 /* asteroid3.png */,
-				E427D8921C7BAE5E009E7275 /* laser_red.png */,
 				E427D85B1C7B76F9009E7275 /* GameViewController.h */,
-				E427D88C1C7B8DD7009E7275 /* rocket2.png */,
 				E427D85C1C7B76F9009E7275 /* GameViewController.m */,
 				E427D85E1C7B76F9009E7275 /* Main.storyboard */,
+				E427D8A41C7BF231009E7275 /* Images */,
 				E427D8611C7B76FA009E7275 /* Assets.xcassets */,
 				E427D8631C7B76FA009E7275 /* LaunchScreen.storyboard */,
 				E427D8661C7B76FA009E7275 /* Info.plist */,
@@ -143,6 +153,12 @@
 		E427D8501C7B76F9009E7275 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E427D8AC1C7BFB00009E7275 /* asteroid.wav */,
+				E427D8AD1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav */,
+				E427D8AA1C7BFA40009E7275 /* loop.wav */,
+				E427D8A51C7BF57D009E7275 /* music.caf */,
+				E427D8A61C7BF6E0009E7275 /* Accelerate.framework */,
+				E427D8A71C7BF6E0009E7275 /* AVFoundation.framework */,
 				E427D8511C7B76F9009E7275 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -164,6 +180,20 @@
 				E427D87C1C7B76FA009E7275 /* Info.plist */,
 			);
 			path = AsteroidsUITests;
+			sourceTree = "<group>";
+		};
+		E427D8A41C7BF231009E7275 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DA8379F41C7BE004003E9AEA /* rocket.png */,
+				E427D88E1C7B8E60009E7275 /* rocket3.png */,
+				E427D8A01C7BBB5B009E7275 /* skyl.png */,
+				E427D8A21C7BBBEE009E7275 /* laser_blue.png */,
+				E427D8901C7B90F2009E7275 /* asteroid3.png */,
+				E427D8921C7BAE5E009E7275 /* laser_red.png */,
+				E427D88C1C7B8DD7009E7275 /* rocket2.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,13 +301,17 @@
 			files = (
 				E427D88D1C7B8DD7009E7275 /* rocket2.png in Resources */,
 				E427D8A31C7BBBEE009E7275 /* laser_blue.png in Resources */,
+				DA8379F51C7BE004003E9AEA /* rocket.png in Resources */,
 				E427D8931C7BAE5E009E7275 /* laser_red.png in Resources */,
 				E427D8A11C7BBB5B009E7275 /* skyl.png in Resources */,
+				E427D8AB1C7BFA40009E7275 /* loop.wav in Resources */,
 				E427D85A1C7B76F9009E7275 /* GameScene.sks in Resources */,
+				E427D8AF1C7BFB00009E7275 /* Rhythmic_loop01(90BPM).wav in Resources */,
 				E427D8651C7B76FA009E7275 /* LaunchScreen.storyboard in Resources */,
 				E427D8621C7B76FA009E7275 /* Assets.xcassets in Resources */,
 				E427D8911C7B90F2009E7275 /* asteroid3.png in Resources */,
 				E427D8601C7B76F9009E7275 /* Main.storyboard in Resources */,
+				E427D8AE1C7BFB00009E7275 /* asteroid.wav in Resources */,
 				E427D88F1C7B8E60009E7275 /* rocket3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Asteroids/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = triveni.Asteroids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Asteroids/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = triveni.Asteroids;
 				PRODUCT_NAME = "$(TARGET_NAME)";

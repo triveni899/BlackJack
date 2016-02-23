@@ -8,8 +8,15 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+@import AVFoundation;
+
+@interface GameViewController ()
+@property (nonatomic) AVAudioPlayer * backgroundMusicPlayer;
+@end
+
 
 @implementation GameViewController
+
 
 - (void)viewDidLoad
 {
@@ -21,6 +28,17 @@
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
+    
+    NSError *error;
+    NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"loop" withExtension:@"wav"];
+    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.backgroundMusicPlayer.numberOfLoops = -1;
+    [self.backgroundMusicPlayer prepareToPlay];
+    [self.backgroundMusicPlayer play];
+    
+    
+    
+    
     // Configure the view.
     // Configure the view after it has been sized for the correct orientation.
     SKView *skView = (SKView *)self.view;
