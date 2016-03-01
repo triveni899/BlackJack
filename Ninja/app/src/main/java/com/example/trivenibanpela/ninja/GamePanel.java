@@ -20,12 +20,12 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
     public static final int WIDTH = 856;
     public static final int HEIGHT = 480;
     public static final int MOVESPEED = -5;
-    //private long smokeStartTime;
+
     private long fruitStartTime;
     private MainThread thread;
     private Background bg;
     private Player player;
-    //private ArrayList<Smokepuff> smoke;
+
     private ArrayList<Fruit> fruits;
     private Random rand = new Random();
 
@@ -67,11 +67,11 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
     @Override
     public void surfaceCreated(SurfaceHolder holder){
 
-        bg = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.wood2));
-        player = new Player(BitmapFactory.decodeResource(getResources(), R.drawable.axe), 65, 25, 3);
-        //smoke = new ArrayList<Smokepuff>();
+        bg = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.back));
+        player = new Player(BitmapFactory.decodeResource(getResources(), R.drawable.cut2), 48, 48, 3);
+
         fruits = new ArrayList<Fruit>();
-        //smokeStartTime=  System.nanoTime();
+
         fruitStartTime = System.nanoTime();
 
 
@@ -121,13 +121,13 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
                 if(fruits.size()==0)
                 {
                     fruits.add(new Fruit(BitmapFactory.decodeResource(getResources(),R.drawable.
-                            melon),WIDTH + 10, HEIGHT/2, 128, 128, player.getScore(), 13));
+                            fruit3),WIDTH + 10, HEIGHT/2, 52, 35, player.getScore(),6));
                 }
                 else
                 {
 
-                    fruits.add(new Fruit(BitmapFactory.decodeResource(getResources(),R.drawable.melon),
-                            WIDTH+10, (int)(rand.nextDouble()*(HEIGHT)),128,128, player.getScore(),13));
+                    fruits.add(new Fruit(BitmapFactory.decodeResource(getResources(),R.drawable.fruit3),
+                            WIDTH+10, (int)(rand.nextDouble()*(HEIGHT)),52,35, player.getScore(),6));
                 }
 
                 //reset timer
