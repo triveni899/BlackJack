@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HXZ-0B-rWY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Moc-Qe-MbI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xn-JA-qxg">
+                                <rect key="frame" x="0.0" y="276" width="568" height="44"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items/>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdL-Rr-GVv">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="jrL-XW-V0w"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Blackjack">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="26" name="Futura-Medium"/>
+                                            <font key="NSOriginalFont" size="36" name="ComicSansMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="table4.png" translatesAutoresizingMaskIntoConstraints="NO" id="BbA-0X-ZnF">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-qn-90h">
+                                <rect key="frame" x="506" y="282" width="42" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="brick.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Stand">
+                                            <attributes>
+                                                <color key="NSColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="12" name="Copperplate-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCH-PH-0h9">
+                                <rect key="frame" x="506" y="256" width="42" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hit" backgroundImage="brick.png">
+                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-Ik-vDs">
+                                <rect key="frame" x="20" y="289" width="42" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="brick.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Stand">
+                                            <attributes>
+                                                <color key="NSColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="12" name="Copperplate-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="Stand:" destination="2" eventType="touchUpInside" id="cMr-lI-YNx"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-RJ-ONa">
+                                <rect key="frame" x="409" y="57" width="80" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="New Game" backgroundImage="brick.png">
+                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ResetGame:" destination="2" eventType="touchUpInside" id="R9f-tn-6NW"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMY-98-dQl">
+                                <rect key="frame" x="20" y="263" width="42" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hit" backgroundImage="brick.png">
+                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="HitCard:" destination="2" eventType="touchUpInside" id="nub-AV-P8X"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plain.png" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-oG-P4k">
+                                <rect key="frame" x="123" y="196" width="83" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plain.png" translatesAutoresizingMaskIntoConstraints="NO" id="qas-jV-Sf2">
+                                <rect key="frame" x="316" y="196" width="83" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-s0-Kf6">
+                                <rect key="frame" x="89" y="61" width="141" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Dealer">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFM-za-lYi">
+                                <rect key="frame" x="304" y="273" width="100" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="AI Player">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhv-sk-bFW">
+                                <rect key="frame" x="154" y="276" width="96" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Chalkduster"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0xn-JA-qxg" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="2Xy-wS-iQ8"/>
+                            <constraint firstItem="0xn-JA-qxg" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="5k5-dP-JP9"/>
+                            <constraint firstItem="ZdL-Rr-GVv" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="Eta-HX-CeH"/>
+                            <constraint firstItem="ZdL-Rr-GVv" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="PDn-Nh-sb4"/>
+                            <constraint firstItem="ZdL-Rr-GVv" firstAttribute="top" secondItem="3" secondAttribute="top" id="lGh-Gd-cMk"/>
+                            <constraint firstItem="0xn-JA-qxg" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="y8g-jF-UV6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YyU-6x-4iB"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="dealerLabel" destination="jhs-s0-Kf6" id="WFA-lR-leq"/>
+                        <outlet property="playerLabel" destination="xhv-sk-bFW" id="Dfw-gn-VJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="-278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brick.png" width="60" height="32"/>
+        <image name="plain.png" width="755" height="1057"/>
+        <image name="table4.png" width="1280" height="512"/>
+    </resources>
+</document>
