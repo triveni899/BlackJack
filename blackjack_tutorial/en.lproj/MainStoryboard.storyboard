@@ -43,48 +43,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="table4.png" translatesAutoresizingMaskIntoConstraints="NO" id="BbA-0X-ZnF">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-qn-90h">
-                                <rect key="frame" x="506" y="282" width="42" height="18"/>
-                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="brick.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Stand">
-                                            <attributes>
-                                                <color key="NSColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="12" name="Copperplate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCH-PH-0h9">
-                                <rect key="frame" x="506" y="256" width="42" height="18"/>
-                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
-                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Hit" backgroundImage="brick.png">
-                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-Ik-vDs">
-                                <rect key="frame" x="20" y="289" width="42" height="18"/>
-                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="brick.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Stand">
-                                            <attributes>
-                                                <color key="NSColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="12" name="Copperplate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="Stand:" destination="2" eventType="touchUpInside" id="cMr-lI-YNx"/>
-                                </connections>
-                            </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-RJ-ONa">
                                 <rect key="frame" x="409" y="57" width="80" height="18"/>
                                 <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,6 +111,27 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busted4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nHp-9u-Er0">
+                                <rect key="frame" x="115" y="208" width="125" height="56"/>
+                            </imageView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-Ik-vDs">
+                                <rect key="frame" x="20" y="289" width="42" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="brick.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Stand">
+                                            <attributes>
+                                                <color key="NSColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="12" name="Copperplate-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="Stand:" destination="2" eventType="touchUpInside" id="cMr-lI-YNx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="0xn-JA-qxg" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="2Xy-wS-iQ8"/>
@@ -166,17 +145,23 @@
                     <navigationItem key="navigationItem" id="YyU-6x-4iB"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="AIplayerLabel" destination="gFM-za-lYi" id="Kl5-gF-3G5"/>
+                        <outlet property="HitButton" destination="iMY-98-dQl" id="bVM-4Y-iyi"/>
                         <outlet property="dealerLabel" destination="jhs-s0-Kf6" id="WFA-lR-leq"/>
                         <outlet property="playerLabel" destination="xhv-sk-bFW" id="Dfw-gn-VJW"/>
+                        <outlet property="resetButton" destination="MIj-RJ-ONa" id="tQE-Mo-4Sw"/>
+                        <outlet property="standButton" destination="HPl-Ik-vDs" id="sdC-lF-8JG"/>
+                        <outletCollection property="bustedPlayer" destination="nHp-9u-Er0" collectionClass="NSMutableArray" id="ngs-Z6-iqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="-278"/>
+            <point key="canvasLocation" x="188" y="-204"/>
         </scene>
     </scenes>
     <resources>
         <image name="brick.png" width="60" height="32"/>
+        <image name="busted4.jpg" width="299" height="168"/>
         <image name="plain.png" width="755" height="1057"/>
         <image name="table4.png" width="1280" height="512"/>
     </resources>

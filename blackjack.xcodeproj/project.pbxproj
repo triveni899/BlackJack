@@ -82,6 +82,8 @@
 		E4165F391CBC477800522101 /* ring3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F381CBC477800522101 /* ring3.png */; };
 		E4165F3B1CBC487500522101 /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F3A1CBC487500522101 /* plain.png */; };
 		E4165F411CBC53BB00522101 /* closed2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F401CBC53BB00522101 /* closed2.png */; };
+		E48E74391CBC92C500960D84 /* busted.gif in Resources */ = {isa = PBXBuildFile; fileRef = E48E74381CBC92C500960D84 /* busted.gif */; };
+		E48E743F1CBC95C600960D84 /* busted4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E48E743E1CBC95C600960D84 /* busted4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +171,9 @@
 		E4165F381CBC477800522101 /* ring3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring3.png; sourceTree = "<group>"; };
 		E4165F3A1CBC487500522101 /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plain.png; sourceTree = "<group>"; };
 		E4165F401CBC53BB00522101 /* closed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closed2.png; sourceTree = "<group>"; };
+		E48E74381CBC92C500960D84 /* busted.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = busted.gif; sourceTree = "<group>"; };
+		E48E743E1CBC95C600960D84 /* busted4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = busted4.jpg; sourceTree = "<group>"; };
+		E48E74401CBCA32D00960D84 /* CommonVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonVar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +296,7 @@
 				10B8C40E169891E200C3C00B /* Deck.m */,
 				10E3478B169373F300D3312F /* Card.m */,
 				10E3476E1691C13500D3312F /* Supporting Files */,
+				E48E74401CBCA32D00960D84 /* CommonVar.h */,
 			);
 			name = blackjack;
 			path = blackjack_tutorial;
@@ -299,6 +305,8 @@
 		10E3476E1691C13500D3312F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E48E743E1CBC95C600960D84 /* busted4.jpg */,
+				E48E74381CBC92C500960D84 /* busted.gif */,
 				E4165F2E1CBC3BDF00522101 /* table4.png */,
 				E4165F3A1CBC487500522101 /* plain.png */,
 				10E3476F1691C13500D3312F /* blackjack-Info.plist */,
@@ -370,6 +378,7 @@
 				10E347721691C13500D3312F /* InfoPlist.strings in Resources */,
 				10E3477A1691C13500D3312F /* Default.png in Resources */,
 				10E3477C1691C13500D3312F /* Default@2x.png in Resources */,
+				E48E743F1CBC95C600960D84 /* busted4.jpg in Resources */,
 				10E3477E1691C13500D3312F /* Default-568h@2x.png in Resources */,
 				10E347811691C13500D3312F /* MainStoryboard.storyboard in Resources */,
 				107E5AC616AC80530010E5EA /* closed.gif in Resources */,
@@ -399,6 +408,7 @@
 				107E5AF616AC80530010E5EA /* spade09.gif in Resources */,
 				107E5AF716AC80530010E5EA /* spade10.gif in Resources */,
 				107E5AF816AC80530010E5EA /* spade11.gif in Resources */,
+				E48E74391CBC92C500960D84 /* busted.gif in Resources */,
 				107E5AF916AC80530010E5EA /* spade12.gif in Resources */,
 				107E5AFA16AC80530010E5EA /* spade13.gif in Resources */,
 				107E5B1A16AF2EBB0010E5EA /* diamond01.gif in Resources */,

@@ -8,6 +8,7 @@
 #import "BlackjackModel.h"
 #import "Hand.h"
 #import "Card.h"
+#import "CommonVar.h"
 
 @interface ViewController ()
 
@@ -15,8 +16,10 @@
 
 @implementation ViewController
 
-@synthesize dealerLabel=_dealerLabel, playerLabel=_playerLabel, HitButton=_HitButton, standButton=_standButton, resetButton = _resetButton, allImageViews =_allImageViews;
+@synthesize dealerLabel=_dealerLabel, playerLabel=_playerLabel,AIplayerLabel=_AIplayerLabel, HitButton=_HitButton,
+standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageViews;
 
+@synthesize bustedPlayer=_bustedPlayer;
 
 - (void)viewWillAppear:(BOOL)animated{
 
@@ -32,12 +35,16 @@
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"table2.jpg"]];
         
         _allImageViews = [[NSMutableArray alloc] initWithCapacity:5];
+        _bustedPlayer = [[NSMutableArray alloc] init];
         
         // Do any additional setup after loading the view, typically from a nib.
         [[BlackjackModel getBlackjackModel]  addObserver:self forKeyPath:@"dealerHand"
                                                  options:NSKeyValueObservingOptionNew context:NULL];
         [[BlackjackModel getBlackjackModel]  addObserver:self forKeyPath:@"playerHand"
                                                  options:NSKeyValueObservingOptionNew context:NULL];
+        [[BlackjackModel getBlackjackModel]  addObserver:self forKeyPath:@"AIplayerHand"
+                                                 options:NSKeyValueObservingOptionNew context:NULL];
+        
         [[BlackjackModel getBlackjackModel]  addObserver:self forKeyPath:@"totalPlays"
                                 options:NSKeyValueObservingOptionNew context:NULL];
         
@@ -73,7 +80,7 @@
 
 -(void) showDealerHand:(Hand *)hand;
 {
-    [self showHand:hand atXPos:20 atYPos:80];
+   [self showHand:hand atXPos:20 atYPos:80];
     _dealerLabel.text = [NSString stringWithFormat:@"Dealer (%d)",[hand getPipValue]];
 }
 
@@ -81,6 +88,13 @@
 {
     [self showHand:hand atXPos:60 atYPos:180];
     _playerLabel.text = [NSString stringWithFormat:@"You (%d)",[hand getPipValue]];
+    
+}
+
+-(void) showAIPlayerHand:(Hand *)hand;
+{
+    [self showHand:hand atXPos:300 atYPos:180];
+    _AIplayerLabel.text = [NSString stringWithFormat:@"AI (%d)",[hand getPipValue]];
     
 }
 
@@ -95,10 +109,19 @@
         {
             [self showDealerHand: (Hand *)[object dealerHand]];
         } else
-            if ([keyPath isEqualToString:@"playerHand"])
+            
+        
+          if (([keyPath isEqualToString:@"playerHand"]) || ([keyPath isEqualToString:@"AIplayerHand"]) )
             {
-                [self showPlayerHand: (Hand *)[object playerHand]];
+               if([keyPath isEqualToString:@"playerHand"]){
+                  [self showPlayerHand: (Hand *)[object playerHand]];}
+                if(([keyPath isEqualToString:@"AIplayerHand"])){
+                    [self showAIPlayerHand: (Hand *)[object AIplayerHand]];}
+                
             }
+        
+        
+        
         else if ([keyPath isEqualToString:@"totalPlays"])
         {
             [self endGame];
@@ -108,6 +131,21 @@
 
 - (IBAction)HitCard:(id)sender {
     [[BlackjackModel getBlackjackModel] playerHandDraws];
+    
+    if(flag == 1)
+    {
+        
+        
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"busted4.jpg"]];
+        CGRect arect = CGRectMake(100, 180, 51, 76);
+        imageView.frame = arect;
+        
+        [_bustedPlayer addObject:imageView];
+        
+        [self.view addSubview:imageView];
+    }
+    
+    [self AIHitCard];
 }
 
 - (IBAction)Stand:(id)sender {
@@ -116,11 +154,14 @@
     [_resetButton setEnabled:NO];
     
     [[BlackjackModel getBlackjackModel] playerStands];
+    
 }
 
     - (IBAction)ResetGame:(id)sender{
         [_HitButton setEnabled:YES];
         [_standButton setEnabled:YES];
+        //[_AIHitButton setEnabled:YES];
+        //[_AIStandButton setEnabled:YES];
         
         //
         // reset the model
@@ -130,15 +171,29 @@
         }
         [_allImageViews removeAllObjects];
         [_dealerLabel setText:@"Dealer"];
-        [_playerLabel setText:@"Player"];
+        [_playerLabel setText:@"You"];
         [_resetButton setEnabled:NO];
      
         [[BlackjackModel getBlackjackModel] resetGame];
     }
 
+- (void)AIHitCard {
+     [[BlackjackModel getBlackjackModel] AIplayerHandDraws];
+}
+//this will go in AI code
+- (void)AIStand{
+    //[_AIHitButton setEnabled:NO];
+    //[_AIStandButton setEnabled:NO];
+    [_resetButton setEnabled:NO];
+    
+    [[BlackjackModel getBlackjackModel] AIplayerStands];
+}
+
     -(void) endGame{
         [_HitButton setEnabled:NO];
         [_standButton setEnabled:NO];
+        //[_AIHitButton setEnabled:NO];
+        //[_AIStandButton setEnabled:NO];
         [_resetButton setEnabled:YES];
     }
 
