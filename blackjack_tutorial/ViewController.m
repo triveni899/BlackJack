@@ -225,7 +225,7 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
             [self.view addSubview:imageView];
         } else
         {
-            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser.jpg"]];
+            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser3.gif"]];
             CGRect arect = CGRectMake(100, 180, 51, 76);
             imageView.frame = arect;
             
@@ -239,7 +239,7 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
     {
         
         
-        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser.jpg"]];
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser3.gif"]];
         CGRect arect = CGRectMake(100, 180, 51, 76);
         imageView.frame = arect;
         
