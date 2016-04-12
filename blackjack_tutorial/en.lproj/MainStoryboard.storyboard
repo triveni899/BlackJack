@@ -31,7 +31,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Blackjack">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="26" name="Futura-Medium"/>
                                             <font key="NSOriginalFont" size="36" name="ComicSansMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -43,18 +43,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="table4.png" translatesAutoresizingMaskIntoConstraints="NO" id="BbA-0X-ZnF">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-RJ-ONa">
-                                <rect key="frame" x="409" y="57" width="80" height="18"/>
-                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
-                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="New Game" backgroundImage="brick.png">
-                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="ResetGame:" destination="2" eventType="touchUpInside" id="R9f-tn-6NW"/>
-                                </connections>
-                            </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMY-98-dQl">
                                 <rect key="frame" x="20" y="263" width="42" height="18"/>
                                 <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,11 +55,26 @@
                                     <action selector="HitCard:" destination="2" eventType="touchUpInside" id="nub-AV-P8X"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufl-fY-8bn">
+                                <rect key="frame" x="409" y="282" width="55" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="AIMove" backgroundImage="brick.png">
+                                    <color key="titleColor" red="0.98059886689999998" green="0.97321826219999996" blue="0.93555384870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AIMoveCard:" destination="2" eventType="touchUpInside" id="Zdx-RY-ZpE"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plain.png" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-oG-P4k">
                                 <rect key="frame" x="123" y="196" width="83" height="80"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plain.png" translatesAutoresizingMaskIntoConstraints="NO" id="qas-jV-Sf2">
                                 <rect key="frame" x="316" y="196" width="83" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busted5.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-Ex-1jq">
+                                <rect key="frame" x="326" y="208" width="125" height="56"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-s0-Kf6">
                                 <rect key="frame" x="89" y="61" width="141" height="14"/>
@@ -86,19 +89,9 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFM-za-lYi">
-                                <rect key="frame" x="304" y="273" width="100" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="AI Player">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="17" name="Chalkduster"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busted5.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="tsk-ad-9jz">
+                                <rect key="frame" x="66" y="38" width="125" height="56"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhv-sk-bFW">
                                 <rect key="frame" x="154" y="276" width="96" height="21"/>
                                 <attributedString key="attributedText">
@@ -111,9 +104,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busted4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nHp-9u-Er0">
-                                <rect key="frame" x="115" y="208" width="125" height="56"/>
-                            </imageView>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-Ik-vDs">
                                 <rect key="frame" x="20" y="289" width="42" height="18"/>
                                 <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,6 +122,34 @@
                                     <action selector="Stand:" destination="2" eventType="touchUpInside" id="cMr-lI-YNx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFM-za-lYi">
+                                <rect key="frame" x="311" y="275" width="166" height="15"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="AI Player">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-RJ-ONa">
+                                <rect key="frame" x="409" y="57" width="80" height="18"/>
+                                <color key="backgroundColor" red="0.85867152150000003" green="0.58275327349999995" blue="0.33126351529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.65669620380000004" blue="0.3675399875" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="New Game" backgroundImage="brick.png">
+                                    <color key="titleColor" red="0.98059886693954468" green="0.97321826219558716" blue="0.93555384874343872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ResetGame:" destination="2" eventType="touchUpInside" id="R9f-tn-6NW"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busted5.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="nHp-9u-Er0">
+                                <rect key="frame" x="115" y="208" width="125" height="56"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="0xn-JA-qxg" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="2Xy-wS-iQ8"/>
@@ -145,6 +163,7 @@
                     <navigationItem key="navigationItem" id="YyU-6x-4iB"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="AIMoveButton" destination="ufl-fY-8bn" id="hei-dQ-7zW"/>
                         <outlet property="AIplayerLabel" destination="gFM-za-lYi" id="Kl5-gF-3G5"/>
                         <outlet property="HitButton" destination="iMY-98-dQl" id="bVM-4Y-iyi"/>
                         <outlet property="dealerLabel" destination="jhs-s0-Kf6" id="WFA-lR-leq"/>
@@ -152,16 +171,18 @@
                         <outlet property="resetButton" destination="MIj-RJ-ONa" id="tQE-Mo-4Sw"/>
                         <outlet property="standButton" destination="HPl-Ik-vDs" id="sdC-lF-8JG"/>
                         <outletCollection property="bustedPlayer" destination="nHp-9u-Er0" collectionClass="NSMutableArray" id="ngs-Z6-iqX"/>
+                        <outletCollection property="bustedAI" destination="TMe-Ex-1jq" collectionClass="NSMutableArray" id="XoQ-ZH-KZD"/>
+                        <outletCollection property="bustedDlr" destination="tsk-ad-9jz" collectionClass="NSMutableArray" id="yb8-Wj-Mbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="-204"/>
+            <point key="canvasLocation" x="173" y="-326"/>
         </scene>
     </scenes>
     <resources>
         <image name="brick.png" width="60" height="32"/>
-        <image name="busted4.jpg" width="299" height="168"/>
+        <image name="busted5.jpeg" width="640" height="352"/>
         <image name="plain.png" width="755" height="1057"/>
         <image name="table4.png" width="1280" height="512"/>
     </resources>

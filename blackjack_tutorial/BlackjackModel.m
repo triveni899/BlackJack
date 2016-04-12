@@ -19,20 +19,15 @@ static BlackjackModel* blackjackModel = nil;
 -(id) init {
     if ((self = [super init])){
         _deck = [[Deck alloc] init];
-        /*
-        paddle = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 60, 10)];
-        [self addSubview:paddle];
-        [paddle setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"paddle.png"]]];
-        CGPoint p = {50,500};
-        [paddle setCenter:p];*/
-    //    _Busted = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 60, 10)];
+   
         
         _playerHand = [[Hand alloc] init];
         _AIplayerHand = [[Hand alloc] init];
         _dealerHand = [[Hand alloc] init];
         _dealerHand.handClosed = YES;
         _totalPlays = 0;
-        flag_player=0;
+        
+        
         
     }
     return (self);
@@ -56,6 +51,7 @@ static BlackjackModel* blackjackModel = nil;
     [self willChangeValueForKey:@"dealerHand"];
     [_dealerHand addCard:[_deck drawCard]];
     [self didChangeValueForKey:@"dealerHand"];
+    [self setAIEngine];
 }
 
 -(void)playerHandDraws
@@ -64,16 +60,44 @@ static BlackjackModel* blackjackModel = nil;
     [_playerHand addCard:[_deck drawCard]];
     [self didChangeValueForKey:@"playerHand"];
     [self EndGameIfPlayerIsBust];
+    [self setAIEngine];
 }
 
 
 
 -(void)AIplayerHandDraws
 {
-    [self willChangeValueForKey:@"AIplayerHand"];
-    [_AIplayerHand addCard:[_deck drawCard]];
-    [self didChangeValueForKey:@"AIplayerHand"];
-    [self EndGameIfAIPlayerIsBust];
+    if(count<=1)
+    {
+        [self willChangeValueForKey:@"AIplayerHand"];
+        [_AIplayerHand addCard:[_deck drawCard]];
+        [self didChangeValueForKey:@"AIplayerHand"];
+        [self EndGameIfPlayerIsBust];
+        
+    }
+    else
+    {
+    
+        if((_AIplayerHand.getPipValue > _playerHand.getPipValue) && (_AIplayerHand.getPipValue > _dealerHand.getPipValue))
+        {
+            if(_AIplayerHand.getPipValue <21)
+            {
+                [self willChangeValueForKey:@"AIplayerHand"];
+                [_AIplayerHand addCard:[_deck drawCard]];
+                [self didChangeValueForKey:@"AIplayerHand"];
+                [self EndGameIfAIPlayerIsBust];
+            
+            }
+            
+        }else
+        {
+            AIplayerstand=1;
+            [self AIplayerStands];
+        }
+        
+    }//else count ends
+    count++;
+    [self setAIEngine];
 }
 
 
@@ -83,16 +107,35 @@ static BlackjackModel* blackjackModel = nil;
   [self didChangeValueForKey:@"dealerHand"];
 }
 
+
+-(void)setAIEngine{
+    
+    AIplayerhand=_AIplayerHand.getPipValue;
+    playerhand=_playerHand.getPipValue;
+    dealerhand=_dealerHand.getPipValue;
+
+}
 -(void)playerStands
 {
+    playerstand=1;
+    
     [self dealerStartsTurn];
     [self dealerPlays];
+    
+    
+    [self setAIEngine];
 }
 
 -(void)AIplayerStands
 {
-    [self dealerStartsTurn];
-    [self dealerPlays];
+     AIplayerstand = 1;
+    
+    if((playerstand==1) && (AIplayerstand == 1))
+    {
+        [self dealerStartsTurn];
+        [self dealerPlays];
+    }
+    [self setAIEngine];
 }
 
 -(void) EndGameIfPlayerIsBust
@@ -100,16 +143,21 @@ static BlackjackModel* blackjackModel = nil;
     if (_playerHand.getPipValue > 21)
     {
         
-        flag=1;
+        player_bflag=1;
 
         [self gameEnds:Dealer];
     }
+     [self setAIEngine];
 }
 
 -(void) EndGameIfAIPlayerIsBust
 {
     if (_AIplayerHand.getPipValue > 21)
+    {
+        AIplayer_bflag=1;
         [self gameEnds:Dealer];
+    }
+     [self setAIEngine];
 }
 
 -(void) gameEnds:(Winner) winner;
@@ -120,6 +168,7 @@ static BlackjackModel* blackjackModel = nil;
 -(void) resetGame;
 {
     _deck = nil;
+    
     _playerHand = nil;
     _AIplayerHand = nil;
     _dealerHand = nil;
@@ -129,22 +178,67 @@ static BlackjackModel* blackjackModel = nil;
     _dealerHand = [[Hand alloc] init];
     _dealerHand.handClosed = YES;
     [self setup];
+     [self setAIEngine];
 }
 
 -(void)dealerPlays
 {
     while (_dealerHand.getPipValue < 17)
     {
+        
         [self dealerHandDraws];
         
     }
     
     if (_dealerHand.getPipValue > 21)
-        [self gameEnds:Player ];
-    else if ((_dealerHand.getPipValue > _playerHand.getPipValue) && (_dealerHand.getPipValue > _AIplayerHand.getPipValue)){
-        [self gameEnds:Dealer];}
+    {
+         dealer_bflag=1;
+        if(_playerHand.getPipValue > _AIplayerHand.getPipValue)
+        {
+            player_wflag=1;
+            [self gameEnds:Player];
+        }else
+        {
+            AIplayer_wflag=1;
+            [self gameEnds:AIPlayer];
+        }
+    }
+    else if (_dealerHand.getPipValue < 21)
+    {
+        if ((_dealerHand.getPipValue > _playerHand.getPipValue) && (_dealerHand.getPipValue > _AIplayerHand.getPipValue)){
+        
+            dealer_wflag=1;
+            player_wflag=0;
+            AIplayer_wflag=0;
+        
+        
+            [self gameEnds:Dealer];
+        }
+        
+       else if((_playerHand.getPipValue > _AIplayerHand.getPipValue) && (_playerHand.getPipValue > _dealerHand.getPipValue) &&  (_playerHand.getPipValue <21))
+        {
+            dealer_wflag=0;
+            player_wflag=1;
+            AIplayer_wflag=0;
+            [self gameEnds:Player];
+            
+        }
+        
+        else
+        {
+            dealer_wflag=0;
+            player_wflag=0;
+            AIplayer_wflag=1;
+            [self gameEnds:AIPlayer];
+            
+        }
+        
+    }
     else
         [self gameEnds:Draw ];
+    
+    
+     [self setAIEngine];
 }
 
 +(BlackjackModel *) getBlackjackModel{

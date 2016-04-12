@@ -15,11 +15,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *dealerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *AIplayerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *AIMoveButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *HitButton;
 @property (weak, nonatomic) IBOutlet UIButton *standButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSMutableArray *bustedPlayer;
+
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSMutableArray *bustedAI;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSMutableArray *bustedDlr;
+
 
 
 //@property (weak, nonatomic) IBOutlet UIButton *AIHitButton;
@@ -28,6 +33,7 @@
 @property NSMutableArray *allImageViews;
 @property int flag_player;
 
+- (IBAction)AIMoveCard:(id)sender;
 - (IBAction)HitCard:(id)sender;
 - (IBAction)Stand:(id)sender;
 - (IBAction)ResetGame:(id)sender;

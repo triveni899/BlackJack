@@ -82,6 +82,12 @@
 		E4165F391CBC477800522101 /* ring3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F381CBC477800522101 /* ring3.png */; };
 		E4165F3B1CBC487500522101 /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F3A1CBC487500522101 /* plain.png */; };
 		E4165F411CBC53BB00522101 /* closed2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4165F401CBC53BB00522101 /* closed2.png */; };
+		E42383E41CBD25DF003CA389 /* busted5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E42383E31CBD25DF003CA389 /* busted5.jpeg */; };
+		E42383E61CBD5A1D003CA389 /* winner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42383E51CBD5A1D003CA389 /* winner2.jpg */; };
+		E42383E81CBD5A25003CA389 /* Winner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42383E71CBD5A25003CA389 /* Winner1.jpg */; };
+		E42383EC1CBD7286003CA389 /* loser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42383EB1CBD7286003CA389 /* loser.jpg */; };
+		E42383EF1CBD731C003CA389 /* loser3.gif in Resources */ = {isa = PBXBuildFile; fileRef = E42383ED1CBD731C003CA389 /* loser3.gif */; };
+		E42383F01CBD731C003CA389 /* loser2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42383EE1CBD731C003CA389 /* loser2.jpg */; };
 		E48E74391CBC92C500960D84 /* busted.gif in Resources */ = {isa = PBXBuildFile; fileRef = E48E74381CBC92C500960D84 /* busted.gif */; };
 		E48E743F1CBC95C600960D84 /* busted4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E48E743E1CBC95C600960D84 /* busted4.jpg */; };
 /* End PBXBuildFile section */
@@ -171,6 +177,12 @@
 		E4165F381CBC477800522101 /* ring3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring3.png; sourceTree = "<group>"; };
 		E4165F3A1CBC487500522101 /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plain.png; sourceTree = "<group>"; };
 		E4165F401CBC53BB00522101 /* closed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closed2.png; sourceTree = "<group>"; };
+		E42383E31CBD25DF003CA389 /* busted5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = busted5.jpeg; sourceTree = "<group>"; };
+		E42383E51CBD5A1D003CA389 /* winner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winner2.jpg; sourceTree = "<group>"; };
+		E42383E71CBD5A25003CA389 /* Winner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Winner1.jpg; sourceTree = "<group>"; };
+		E42383EB1CBD7286003CA389 /* loser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loser.jpg; sourceTree = "<group>"; };
+		E42383ED1CBD731C003CA389 /* loser3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loser3.gif; sourceTree = "<group>"; };
+		E42383EE1CBD731C003CA389 /* loser2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loser2.jpg; sourceTree = "<group>"; };
 		E48E74381CBC92C500960D84 /* busted.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = busted.gif; sourceTree = "<group>"; };
 		E48E743E1CBC95C600960D84 /* busted4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = busted4.jpg; sourceTree = "<group>"; };
 		E48E74401CBCA32D00960D84 /* CommonVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonVar.h; sourceTree = "<group>"; };
@@ -308,9 +320,15 @@
 				E48E743E1CBC95C600960D84 /* busted4.jpg */,
 				E48E74381CBC92C500960D84 /* busted.gif */,
 				E4165F2E1CBC3BDF00522101 /* table4.png */,
+				E42383E51CBD5A1D003CA389 /* winner2.jpg */,
+				E42383ED1CBD731C003CA389 /* loser3.gif */,
+				E42383EE1CBD731C003CA389 /* loser2.jpg */,
+				E42383E31CBD25DF003CA389 /* busted5.jpeg */,
+				E42383E71CBD5A25003CA389 /* Winner1.jpg */,
 				E4165F3A1CBC487500522101 /* plain.png */,
 				10E3476F1691C13500D3312F /* blackjack-Info.plist */,
 				E4165F341CBC46A900522101 /* ring.png */,
+				E42383EB1CBD7286003CA389 /* loser.jpg */,
 				E4165F381CBC477800522101 /* ring3.png */,
 				E4165F361CBC472100522101 /* ring2.png */,
 				10E347701691C13500D3312F /* InfoPlist.strings */,
@@ -405,13 +423,17 @@
 				107E5AF416AC80530010E5EA /* spade07.gif in Resources */,
 				107E5AF516AC80530010E5EA /* spade08.gif in Resources */,
 				E4165F2F1CBC3BDF00522101 /* table4.png in Resources */,
+				E42383EF1CBD731C003CA389 /* loser3.gif in Resources */,
 				107E5AF616AC80530010E5EA /* spade09.gif in Resources */,
 				107E5AF716AC80530010E5EA /* spade10.gif in Resources */,
+				E42383E81CBD5A25003CA389 /* Winner1.jpg in Resources */,
 				107E5AF816AC80530010E5EA /* spade11.gif in Resources */,
 				E48E74391CBC92C500960D84 /* busted.gif in Resources */,
+				E42383F01CBD731C003CA389 /* loser2.jpg in Resources */,
 				107E5AF916AC80530010E5EA /* spade12.gif in Resources */,
 				107E5AFA16AC80530010E5EA /* spade13.gif in Resources */,
 				107E5B1A16AF2EBB0010E5EA /* diamond01.gif in Resources */,
+				E42383E61CBD5A1D003CA389 /* winner2.jpg in Resources */,
 				107E5B1B16AF2EBB0010E5EA /* diamond02.gif in Resources */,
 				107E5B1C16AF2EBB0010E5EA /* diamond03.gif in Resources */,
 				107E5B1D16AF2EBB0010E5EA /* diamond04.gif in Resources */,
@@ -424,6 +446,7 @@
 				107E5B2316AF2EBB0010E5EA /* diamond10.gif in Resources */,
 				107E5B2416AF2EBB0010E5EA /* diamond11.gif in Resources */,
 				E4165F371CBC472100522101 /* ring2.png in Resources */,
+				E42383EC1CBD7286003CA389 /* loser.jpg in Resources */,
 				107E5B2516AF2EBB0010E5EA /* diamond12.gif in Resources */,
 				107E5B2616AF2EBB0010E5EA /* diamond13.gif in Resources */,
 				107E5B2716AF2EBB0010E5EA /* heart01.gif in Resources */,
@@ -431,6 +454,7 @@
 				107E5B2916AF2EBB0010E5EA /* heart03.gif in Resources */,
 				E4165F351CBC46A900522101 /* ring.png in Resources */,
 				107E5B2A16AF2EBB0010E5EA /* heart04.gif in Resources */,
+				E42383E41CBD25DF003CA389 /* busted5.jpeg in Resources */,
 				107E5B2B16AF2EBB0010E5EA /* heart05.gif in Resources */,
 				107E5B2C16AF2EBB0010E5EA /* heart06.gif in Resources */,
 				107E5B2D16AF2EBB0010E5EA /* heart07.gif in Resources */,

@@ -18,8 +18,9 @@
 
 @synthesize dealerLabel=_dealerLabel, playerLabel=_playerLabel,AIplayerLabel=_AIplayerLabel, HitButton=_HitButton,
 standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageViews;
+ 
+@synthesize bustedPlayer=_bustedPlayer, bustedAI=_bustedAI, bustedDlr =_bustedDlr,AIMoveButton =_AIMoveButton;
 
-@synthesize bustedPlayer=_bustedPlayer;
 
 - (void)viewWillAppear:(BOOL)animated{
 
@@ -33,6 +34,15 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
     {
         [super viewDidLoad];
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"table2.jpg"]];
+        //_HitButton.hidden="NO";
+        //_standButton.hidden="NO";
+       // _AIMoveButton.hidden="YES";
+        /*player_bflag=0;AIplayer_bflag=0;dealer_bflag =0;
+        player_wflag=0;AIplayer_wflag=0;dealer_wflag =0;
+        AIplayerhand=0;playerhand=0;dealerhand =0;
+        AIplayerstand=0;playerstand=0;dealerstand =0;
+        count=0;*/
+
         
         _allImageViews = [[NSMutableArray alloc] initWithCapacity:5];
         _bustedPlayer = [[NSMutableArray alloc] init];
@@ -129,14 +139,117 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
 
     }
 
+- (IBAction)AIMoveCard:(id)sender {
+    [[BlackjackModel getBlackjackModel] AIplayerHandDraws];
+    [self winlosecheck];
+}
+
 - (IBAction)HitCard:(id)sender {
     [[BlackjackModel getBlackjackModel] playerHandDraws];
     
-    if(flag == 1)
+    [self winlosecheck];
+    [self AIEngineCode];
+}
+
+
+-(void) winlosecheck{
+    if(player_bflag == 1)
     {
         
         
-        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"busted4.jpg"]];
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"busted5.jpeg"]];
+        CGRect arect = CGRectMake(100, 180, 51, 76);
+        imageView.frame = arect;
+        
+        [_bustedPlayer addObject:imageView];
+        
+        [self.view addSubview:imageView];
+    }
+    if(dealer_bflag == 1)
+    {
+        
+        
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"busted5.jpeg"]];
+        CGRect arect = CGRectMake(60, 80, 51, 76);
+        imageView.frame = arect;
+        
+        [_bustedDlr addObject:imageView];
+        
+        [self.view addSubview:imageView];
+        
+        
+        if(playerhand > AIplayerhand)
+        {
+            player_wflag=1;
+            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"Winner1.jpeg"]];
+            CGRect arect = CGRectMake(100, 180, 51, 76);
+            imageView.frame = arect;
+            
+            [_bustedPlayer addObject:imageView];
+            
+            [self.view addSubview:imageView];
+        }else
+        {
+            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"Winner1.jpeg"]];
+            CGRect arect = CGRectMake(340, 80, 51, 76);
+            imageView.frame = arect;
+            
+            [_bustedAI addObject:imageView];
+            [self.view addSubview:imageView];
+            
+        }
+        
+        
+    }
+    if(AIplayer_bflag == 1)
+    {
+        
+        
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"busted5.jpeg"]];
+        CGRect arect = CGRectMake(340, 80, 51, 76);
+        imageView.frame = arect;
+        
+        
+        [_bustedAI addObject:imageView];
+        [self.view addSubview:imageView];
+        
+        if(playerhand > AIplayerhand)
+        {
+            player_wflag=1;
+            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"Winner1.jpeg"]];
+            CGRect arect = CGRectMake(100, 180, 51, 76);
+            imageView.frame = arect;
+            
+            [_bustedPlayer addObject:imageView];
+            
+            [self.view addSubview:imageView];
+        } else
+        {
+            UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser.jpg"]];
+            CGRect arect = CGRectMake(100, 180, 51, 76);
+            imageView.frame = arect;
+            
+            [_bustedPlayer addObject:imageView];
+            
+            [self.view addSubview:imageView];
+        }
+    }
+    
+    if((AIplayer_wflag == 1)||(dealer_wflag == 1))
+    {
+        
+        
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"loser.jpg"]];
+        CGRect arect = CGRectMake(100, 180, 51, 76);
+        imageView.frame = arect;
+        
+        [_bustedPlayer addObject:imageView];
+        
+        [self.view addSubview:imageView];
+    } else if (player_wflag == 1)
+    {
+        
+        UIImageView *imageView=[[UIImageView alloc] initWithImage:[ UIImage imageNamed:@"Winner1.jpg"]];
         CGRect arect = CGRectMake(100, 180, 51, 76);
         imageView.frame = arect;
         
@@ -145,7 +258,26 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
         [self.view addSubview:imageView];
     }
     
-    [self AIHitCard];
+
+}  //win lose check
+
+
+-(void)AIEngineCode{
+    if(AIplayerstand == 1)
+    {
+        _AIplayerLabel.text = [NSString stringWithFormat:@"AI Stands (%d)",AIplayerhand];
+    }else
+    if((playerstand == 1) && (AIplayerstand == 0))
+    {
+            [_AIMoveButton setHidden:NO];
+            [_HitButton setHidden:YES];
+             [_standButton setHidden:YES];
+    }
+    else{
+        
+     [[BlackjackModel getBlackjackModel] AIplayerHandDraws];
+    }
+    
 }
 
 - (IBAction)Stand:(id)sender {
@@ -155,11 +287,14 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
     
     [[BlackjackModel getBlackjackModel] playerStands];
     
+    [self winlosecheck];
+    
 }
 
     - (IBAction)ResetGame:(id)sender{
         [_HitButton setEnabled:YES];
         [_standButton setEnabled:YES];
+        [_AIMoveButton setHidden:YES];
         //[_AIHitButton setEnabled:YES];
         //[_AIStandButton setEnabled:YES];
         
@@ -169,12 +304,17 @@ standButton=_standButton,resetButton = _resetButton, allImageViews =_allImageVie
         {
             [view removeFromSuperview];
         }
+        
         [_allImageViews removeAllObjects];
+       
+    
         [_dealerLabel setText:@"Dealer"];
         [_playerLabel setText:@"You"];
+        [_AIplayerLabel setText:@"AI Player"];
         [_resetButton setEnabled:NO];
-     
+        
         [[BlackjackModel getBlackjackModel] resetGame];
+        
     }
 
 - (void)AIHitCard {

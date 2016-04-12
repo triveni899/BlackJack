@@ -8,6 +8,10 @@
 
 #ifndef CommonVar_h
 #define CommonVar_h
-int flag;
+int player_bflag,AIplayer_bflag,dealer_bflag;
+int player_wflag,AIplayer_wflag,dealer_wflag;
+int AIplayerhand,playerhand,dealerhand;
+int AIplayerstand,playerstand,dealerstand;
+int count;
 
 #endif /* CommonVar_h */
